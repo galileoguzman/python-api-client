@@ -45,6 +45,7 @@ class Base(object):
     elif method == 'delete':
       response = requests.delete(url, auth=self.client.auth, json=data)
 
+    print(response.text)
     return response
 
   def process_request(self, method, url=None, data=None, json=None, files=None):
